@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+</head>
+
+<body>
+    <input type="text" name="name" id="name">
+    <select id="gender">
+        <option value="">--</option>
+        <option value="male">M</option>
+        <option value="female">F</option>
+    </select>
+    <input type="text" name="email" id="email">
+    <input type="text" name="mobile" id="mobile">
+    <hr>
+    <h1 id="dName">NAME</h1>
+    <h2 id="dGender">GENDER</h2>
+    <h3 id="dEmail">EMAIL</h3>
+    <h4 id="dMobile">MOBILE</h4>
+    <hr>
+    <button onclick="showName()">NAME</button>
+    <button onclick="showGender()">GENDER</button>
+    <button onclick="showEmail()">EMAIL</button>
+    <button onclick="showMobile()">MOBILE</button>
+    <button onclick="resetForm()">RESET FORM</button>
+    <button onclick="resetDisplay()">RESET DISPLAY</button>
+    <script type="text/javascript">
+        const nameEl = document.getElementById("name");
+        const genderEl = document.getElementById("gender");
+        const emailEl = document.getElementById("email");
+        const mobileEl = document.getElementById("mobile");
+        const nameh1 = document.getElementById("dName");
+        const genderh1 = document.getElementById("dGender");
+        const Emailh1 = document.getElementById("dEmail");
+        const Mobileh1 = document.getElementById("dMobile");
+
+
+        function showName() {
+            nameh1.textContent = "NAME" + " " + nameEl.value;
+        }
+
+        function showGender() {
+            genderh1.textContent = "GENDER" + " " + genderEl.value;
+        }
+
+        function showEmail() {
+            Emailh1.textContent = "EMAIL" + " " + emailEl.value;
+        }
+
+        function showMobile() {
+            Mobileh1.textContent = "MOBILE" + " " + mobileEl.value;
+        }
+
+        function resetForm() {
+            nameEl.value = "";
+            emailEl.value = "";
+            genderEl.value = "";
+            mobileEl.value = "";
+
+        }
+
+        function resetDisplay() {
+            nameh1.textContent = "NAME";
+            genderh1.textContent = "GENDER";
+            Emailh1.textContent = "EMAIL";
+            Mobileh1.textContent = "MOBILE";
+        }
+    </script>
+</body>
+
+</html>
